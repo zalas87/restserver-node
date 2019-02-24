@@ -34,3 +34,9 @@ let urlDB;
 urlDB = 'mongodb://root:root2019@ds127115.mlab.com:27115/cafe';
 //}
 process.env.URLDB = urlDB;
+
+
+// ============================
+//  Google Client ID
+// ============================
+process.env.CLIENT_ID = process.env.CLIENT_ID || "638043621248-rlcq309qtsja46aqdss94h60b95qd69r.apps.googleusercontent.com ";
