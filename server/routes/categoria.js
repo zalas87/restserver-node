@@ -132,7 +132,7 @@ app.put('/categoria/:id', verificaToken, (req, res) => {
 
 });
 
-app.delete('/categoria/:id', [verificaToken, verificaAdmin_role](req, res) => {
+app.delete('/categoria/:id', [verificaToken, verificaAdmin_role], (req, res) => {
     //Solo un administrador puede borrar una categoría
     let id = req.params.id;
 

@@ -1,6 +1,6 @@
 const express = require('express');
 
-const {} = require('../middlewares/autentification');
+let { verificaToken, verificaAdmin_role } = require('../middleware/autentificacion');
 
 let app = express();
 
@@ -121,7 +121,7 @@ app.post('/productos', verificaToken, (req, res) => {
     let producto = new Producto({
         nombre: body.nombre,
         precioUni: body.precioUni,
-        descripcion: body.descricion;
+        descripcion: body.descricion,
         disponible: body.disponible,
         categoria: body.categoria,
         usuario: req.usuario._id
